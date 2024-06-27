@@ -11,13 +11,13 @@ createApp ({
     data() {
         return {
             emails: [],
-            allEmailsGenerated: false,
+            nEmails: 10,
         }
     },
     methods: {
 
         addEmails() {
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < this.nEmails; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
                 .then(risposta => {
                     this.emails.push(risposta.data.response);

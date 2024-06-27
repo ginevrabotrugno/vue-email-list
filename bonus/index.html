@@ -16,8 +16,7 @@
     <h1>Email List</h1>
 
     <div id="app">
-        <!-- Mostra la lista solo quando tutti gli indirizzi sono stati generati (allEmailsGenerated = true)-->
-        <ul v-if="allEmailsGenerated">
+        <ul v-if="emails.length === nEmails">
             <li v-for="email in emails" :key="email">
                 {{email}}
             </li>
