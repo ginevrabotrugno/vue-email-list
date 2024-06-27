@@ -1,0 +1,60 @@
+/* css/style.css */
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stile del corpo */
+body {
+    font-family: sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Stile dell'intestazione */
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Stile del contenitore dell'app */
+#app {
+    max-width: 600px;
+    width: 100%;
+    background: #ecf0f1;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Stile della lista ordinata */
+ul {
+    list-style: none;
+}
+
+/* Stile degli elementi della lista */
+li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+li:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
