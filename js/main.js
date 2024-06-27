@@ -5,9 +5,9 @@ const { createApp } = Vue;
 
 createApp ({
     data() {
-      return {
-        
-      }
+        return {
+            emails: ["mariorossi@mail.com","lucabianchi@mail.com"],
+        }
     },
     methods: {
         
