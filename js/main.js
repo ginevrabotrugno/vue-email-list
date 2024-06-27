@@ -6,20 +6,22 @@ const { createApp } = Vue;
 createApp ({
     data() {
         return {
-            emails: ["mariorossi@mail.com","lucabianchi@mail.com"],
+            emails: [],
         }
     },
     methods: {
-        
+
+        addEmails() {
+            for (let i = 0; i < 10; i++) {
+                axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+                .then(risposta => {
+                    this.emails.push(risposta.data.response);
+                });
+            }
+        }
     },
     mounted() {
-
-        for (let i = 0; i < 10; i++) {
-            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-            .then(risposta => {
-                this.emails.push(risposta.data.response);
-            });
-        }
-        
+        this.addEmails();
     }
+
 }).mount('#app');
